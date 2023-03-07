@@ -87,7 +87,7 @@ server <- function(input, output) {
     n_total <- nrow(mileage_data)
     n_missing <- sum(is.na(mileage_data$Year) | is.na(mileage_data$Status))
     n_non_missing <- n_total - n_missing
-    paste("Number of cars that meet this requiremnet: ", n_non_missing)
+    paste("The number of cars that have at most ", input$mileage, " miles: ", n_non_missing)
   })
   
   
