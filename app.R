@@ -29,7 +29,6 @@ ui <- fluidPage(
     tabPanel("Plot",
              sidebarLayout(
                sidebarPanel(
-                 textOutput("plot_text"),
                  sliderInput("mileage", "Mileage on car", 
                              min = 0, 
                              max = 115000, 
@@ -38,8 +37,10 @@ ui <- fluidPage(
                               choices = c("skyblue", "lawngreen", "red", "purple", "gold"))
                ),
                mainPanel(
-                 plotOutput("plot")
-               )
+                 plotOutput("plot"),
+              
+               textOutput("plot_text"),
+               ),
              )
     ),
     
